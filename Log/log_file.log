@@ -1,0 +1,26 @@
+2019-03-26 23:35:23 DEBUG ComplexNumberController:17 - buildNum method is called!
+2019-03-26 23:35:23 DEBUG ComplexNumberController:31 - checking finished successfully
+2019-03-26 23:35:23 DEBUG ComplexNumberController:38 - buildNum method is called!
+2019-03-26 23:35:23 DEBUG ComplexNumberController:42 - buildNum completed 
+2019-03-26 23:36:16 DEBUG ComplexNumberController:17 - buildNum method is called!
+2019-03-26 23:36:16 DEBUG ComplexNumberController:31 - checking finished successfully
+2019-03-26 23:36:16 DEBUG ComplexNumberController:38 - buildNum method is called!
+2019-03-26 23:36:16 DEBUG ComplexNumberController:42 - buildNum completed 
+2019-03-26 23:36:37 DEBUG ComplexNumberController:17 - buildNum method is called!
+2019-03-26 23:36:37 DEBUG ComplexNumberController:31 - checking finished successfully
+2019-03-26 23:36:37 DEBUG ComplexNumberController:38 - buildNum method is called!
+2019-03-26 23:36:37 DEBUG ComplexNumberController:42 - buildNum completed 
+2019-03-27 00:14:24 DEBUG ComplexNumberController:39 - buildNum method is called!
+2019-03-27 00:14:24 DEBUG ComplexNumberController:43 - buildNum completed 
+2019-03-27 00:15:36 DEBUG ComplexNumberController:39 - buildNum method is called!
+2019-03-27 00:15:36 DEBUG ComplexNumberController:43 - buildNum completed 
+2019-03-27 00:16:24 DEBUG ComplexNumberController:39 - buildNum method is called!
+2019-03-27 00:16:24 DEBUG ComplexNumberController:43 - buildNum completed 
+2019-03-27 00:16:24 DEBUG ComplexNumberController:39 - buildNum method is called!
+2019-03-27 00:16:24 DEBUG ComplexNumberController:43 - buildNum completed 
+2019-03-27 00:18:11 DEBUG ComplexNumberController:18 - checkParameters method is called!
+2019-03-27 00:18:11 DEBUG ComplexNumberController:32 - checking finished successfully
+2019-03-27 00:19:06 DEBUG ComplexNumberController:18 - checkParameters method is called!
+2019-03-27 00:19:06 DEBUG ComplexNumberController:32 - checking finished successfully
+2019-03-27 00:19:25 DEBUG ComplexNumberController:18 - checkParameters method is called!
+2019-03-27 00:19:25 DEBUG ComplexNumberController:32 - checking finished successfully
