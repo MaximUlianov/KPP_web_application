@@ -16,10 +16,10 @@ import org.springframework.test.web.servlet.MockMvc;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.test.web.servlet.setup.MockMvcBuilders.standaloneSetup;
+import static org.springframework.test.web.servlet.setup.MockMvcBuilders.webAppContextSetup;
 
-import static org.junit.Assert.*;
 
-@RunWith(SpringJUnit4ClassRunner.class)
+@RunWith(SpringRunner.class)
 @SpringBootTest(classes = {ComplexNumberController.class, ComplexNumberService.class})
 public class ComplexNumberControllerTest {
 
@@ -30,7 +30,7 @@ public class ComplexNumberControllerTest {
 
     @Before
     public void set(){
-        this.mvc = standaloneSetup(service).build();
+        this.mvc = standaloneSetup(new ComplexNumberController(service)).build();
     }
 
 
@@ -39,7 +39,13 @@ public class ComplexNumberControllerTest {
         mvc.perform(get("/api/complexNumber?real=50&imaginary=6")
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk());
+    }
 
+    @Test
+    public void getByParts() throws Exception{
+        mvc.perform(get("/api/complexNumber/getByParts?real=50&imaginary=6")
+                .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk());
     }
 
     @Test

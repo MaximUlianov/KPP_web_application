@@ -24,3 +24,113 @@
 2019-03-27 00:19:06 DEBUG ComplexNumberController:32 - checking finished successfully
 2019-03-27 00:19:25 DEBUG ComplexNumberController:18 - checkParameters method is called!
 2019-03-27 00:19:25 DEBUG ComplexNumberController:32 - checking finished successfully
+2019-03-27 22:54:06 DEBUG ComplexNumberController:18 - checkParameters method is called!
+2019-03-27 22:54:06 DEBUG ComplexNumberController:32 - checking finished successfully
+2019-03-27 22:54:06 DEBUG ComplexNumberController:39 - buildNum method is called!
+2019-03-27 22:54:06 DEBUG ComplexNumberController:43 - buildNum completed 
+2019-03-27 22:54:06 DEBUG ComplexNumberController:39 - buildNum method is called!
+2019-03-27 22:54:06 DEBUG ComplexNumberController:43 - buildNum completed 
+2019-03-27 23:52:27 DEBUG ComplexNumberController:17 - checkParameters method is called!
+2019-03-27 23:52:27 DEBUG ComplexNumberController:31 - checking finished successfully
+2019-03-27 23:52:27 DEBUG ComplexNumberController:38 - buildNum method is called!
+2019-03-27 23:52:27 DEBUG ComplexNumberController:42 - buildNum completed 
+2019-03-27 23:53:00 DEBUG ComplexNumberController:17 - checkParameters method is called!
+2019-03-27 23:53:00 ERROR ComplexNumberController:22 - Incorrect 'imaginary' input
+2019-03-27 23:53:06 DEBUG ComplexNumberController:17 - checkParameters method is called!
+2019-03-27 23:53:06 ERROR ComplexNumberController:28 - Incorrect 'real' input
+2019-03-27 23:53:12 DEBUG ComplexNumberController:17 - checkParameters method is called!
+2019-03-27 23:53:12 DEBUG ComplexNumberController:31 - checking finished successfully
+2019-03-27 23:53:12 DEBUG ComplexNumberController:38 - buildNum method is called!
+2019-03-27 23:53:12 DEBUG ComplexNumberController:42 - buildNum completed 
+2019-03-28 00:01:08 DEBUG ComplexNumberController:18 - checkParameters method is called!
+2019-03-28 00:01:08 DEBUG ComplexNumberController:32 - checking finished successfully
+2019-03-28 00:01:08 DEBUG ComplexNumberController:39 - buildNum method is called!
+2019-03-28 00:01:08 DEBUG ComplexNumberController:43 - buildNum completed 
+2019-03-28 00:01:08 DEBUG ComplexNumberController:18 - checkParameters method is called!
+2019-03-28 00:01:08 ERROR ComplexNumberController:29 - Incorrect 'real' input
+2019-03-28 00:01:08 DEBUG ComplexNumberController:18 - checkParameters method is called!
+2019-03-28 00:01:08 ERROR ComplexNumberController:23 - Incorrect 'imaginary' input
+2019-03-28 00:01:08 DEBUG ComplexNumberController:18 - checkParameters method is called!
+2019-03-28 00:01:08 ERROR ComplexNumberController:23 - Incorrect 'imaginary' input
+2019-03-28 00:01:08 DEBUG ComplexNumberController:18 - checkParameters method is called!
+2019-03-28 00:01:08 DEBUG ComplexNumberController:32 - checking finished successfully
+2019-03-28 00:01:08 DEBUG ComplexNumberController:39 - buildNum method is called!
+2019-03-28 00:01:08 DEBUG ComplexNumberController:43 - buildNum completed 
+2019-03-28 00:33:03 DEBUG ComplexNumberController:18 - checkParameters method is called!
+2019-03-28 00:33:03 DEBUG ComplexNumberController:32 - checking finished successfully
+2019-03-28 00:33:03 DEBUG ComplexNumberController:39 - buildNum method is called!
+2019-03-28 00:33:03 DEBUG ComplexNumberController:43 - buildNum completed 
+2019-03-28 00:33:03 DEBUG ComplexNumberController:18 - checkParameters method is called!
+2019-03-28 00:33:03 ERROR ComplexNumberController:29 - Incorrect 'real' input
+2019-03-28 00:33:03 DEBUG ComplexNumberController:18 - checkParameters method is called!
+2019-03-28 00:33:03 ERROR ComplexNumberController:23 - Incorrect 'imaginary' input
+2019-03-28 00:33:03 DEBUG ComplexNumberController:18 - checkParameters method is called!
+2019-03-28 00:33:03 ERROR ComplexNumberController:23 - Incorrect 'imaginary' input
+2019-03-28 00:33:03 DEBUG ComplexNumberController:18 - checkParameters method is called!
+2019-03-28 00:33:03 DEBUG ComplexNumberController:32 - checking finished successfully
+2019-03-28 00:33:03 DEBUG ComplexNumberController:39 - buildNum method is called!
+2019-03-28 00:33:03 DEBUG ComplexNumberController:43 - buildNum completed 
+2019-03-28 00:33:11 INFO  Application:34 - .... Fetching nums
+2019-03-28 00:33:13 INFO  Application:35 - real-30 -->backend.com.edu.epam.kpp.Entity.ComplexNumber@7b603c1
+2019-03-28 00:33:15 INFO  Application:36 - real-40 -->backend.com.edu.epam.kpp.Entity.ComplexNumber@87003c1
+2019-03-28 00:33:15 INFO  Application:37 - real-30 -->backend.com.edu.epam.kpp.Entity.ComplexNumber@7b603c1
+2019-03-28 00:33:15 INFO  Application:38 - real-30 -->backend.com.edu.epam.kpp.Entity.ComplexNumber@7b603c1
+2019-03-28 00:33:15 INFO  Application:39 - real-40 -->backend.com.edu.epam.kpp.Entity.ComplexNumber@87003c1
+2019-03-28 00:33:17 INFO  Application:40 - real-50 -->backend.com.edu.epam.kpp.Entity.ComplexNumber@90b03c1
+2019-03-28 00:50:12 DEBUG ComplexNumberController:29 - getByParts method is called!
+2019-03-28 00:50:18 DEBUG ComplexNumberController:29 - getByParts method is called!
+2019-03-28 00:50:23 DEBUG ComplexNumberController:29 - getByParts method is called!
+2019-03-28 00:50:29 DEBUG ComplexNumberController:29 - getByParts method is called!
+2019-03-28 00:50:33 DEBUG ComplexNumberController:29 - getByParts method is called!
+2019-03-28 00:50:40 DEBUG ComplexNumberController:29 - getByParts method is called!
+2019-03-28 00:50:43 DEBUG ComplexNumberController:29 - getByParts method is called!
+2019-03-28 00:54:32 DEBUG ComplexNumberController:47 - checkParameters method is called!
+2019-03-28 00:54:32 DEBUG ComplexNumberController:61 - checking finished successfully
+2019-03-28 00:54:32 DEBUG ComplexNumberController:68 - buildNum method is called!
+2019-03-28 00:54:32 DEBUG ComplexNumberController:72 - buildNum completed 
+2019-03-28 00:54:32 DEBUG ComplexNumberController:47 - checkParameters method is called!
+2019-03-28 00:54:32 ERROR ComplexNumberController:58 - Incorrect 'real' input
+2019-03-28 00:54:32 DEBUG ComplexNumberController:47 - checkParameters method is called!
+2019-03-28 00:54:32 ERROR ComplexNumberController:52 - Incorrect 'imaginary' input
+2019-03-28 00:54:32 DEBUG ComplexNumberController:47 - checkParameters method is called!
+2019-03-28 00:54:32 ERROR ComplexNumberController:52 - Incorrect 'imaginary' input
+2019-03-28 00:54:32 DEBUG ComplexNumberController:47 - checkParameters method is called!
+2019-03-28 00:54:32 DEBUG ComplexNumberController:61 - checking finished successfully
+2019-03-28 00:54:32 DEBUG ComplexNumberController:68 - buildNum method is called!
+2019-03-28 00:54:32 DEBUG ComplexNumberController:72 - buildNum completed 
+2019-03-28 00:54:32 DEBUG ComplexNumberController:29 - getByParts method is called!
+2019-03-28 00:54:47 DEBUG ComplexNumberController:47 - checkParameters method is called!
+2019-03-28 00:54:47 DEBUG ComplexNumberController:61 - checking finished successfully
+2019-03-28 00:54:47 DEBUG ComplexNumberController:68 - buildNum method is called!
+2019-03-28 00:54:47 DEBUG ComplexNumberController:72 - buildNum completed 
+2019-03-28 00:54:47 DEBUG ComplexNumberController:47 - checkParameters method is called!
+2019-03-28 00:54:47 ERROR ComplexNumberController:58 - Incorrect 'real' input
+2019-03-28 00:54:47 DEBUG ComplexNumberController:47 - checkParameters method is called!
+2019-03-28 00:54:47 ERROR ComplexNumberController:52 - Incorrect 'imaginary' input
+2019-03-28 00:54:47 DEBUG ComplexNumberController:47 - checkParameters method is called!
+2019-03-28 00:54:47 ERROR ComplexNumberController:52 - Incorrect 'imaginary' input
+2019-03-28 00:54:47 DEBUG ComplexNumberController:47 - checkParameters method is called!
+2019-03-28 00:54:47 DEBUG ComplexNumberController:61 - checking finished successfully
+2019-03-28 00:54:47 DEBUG ComplexNumberController:68 - buildNum method is called!
+2019-03-28 00:54:47 DEBUG ComplexNumberController:72 - buildNum completed 
+2019-03-28 00:54:47 DEBUG ComplexNumberController:29 - getByParts method is called!
+2019-03-28 00:55:02 DEBUG ComplexNumberController:29 - getByParts method is called!
+2019-03-28 00:55:20 DEBUG ComplexNumberController:29 - getByParts method is called!
+2019-03-28 00:57:57 DEBUG ComplexNumberController:68 - buildNum method is called!
+2019-03-28 00:57:57 DEBUG ComplexNumberController:72 - buildNum completed 
+2019-03-28 00:57:57 DEBUG ComplexNumberController:29 - getByParts method is called!
+2019-03-28 00:59:23 DEBUG ComplexNumberController:68 - buildNum method is called!
+2019-03-28 00:59:23 DEBUG ComplexNumberController:72 - buildNum completed 
+2019-03-28 00:59:23 DEBUG ComplexNumberController:68 - buildNum method is called!
+2019-03-28 00:59:23 DEBUG ComplexNumberController:72 - buildNum completed 
+2019-03-28 00:59:23 DEBUG ComplexNumberController:68 - buildNum method is called!
+2019-03-28 00:59:23 DEBUG ComplexNumberController:72 - buildNum completed 
+2019-03-28 00:59:23 DEBUG ComplexNumberController:29 - getByParts method is called!
+2019-03-28 00:59:23 DEBUG ComplexNumberController:47 - checkParameters method is called!
+2019-03-28 00:59:23 DEBUG ComplexNumberController:61 - checking finished successfully
+2019-03-28 00:59:35 DEBUG ComplexNumberController:68 - buildNum method is called!
+2019-03-28 00:59:35 DEBUG ComplexNumberController:72 - buildNum completed 
+2019-03-28 00:59:35 DEBUG ComplexNumberController:68 - buildNum method is called!
+2019-03-28 00:59:35 DEBUG ComplexNumberController:72 - buildNum completed 
+2019-03-28 00:59:35 DEBUG ComplexNumberController:47 - checkParameters method is called!
+2019-03-28 00:59:35 DEBUG ComplexNumberController:61 - checking finished successfully

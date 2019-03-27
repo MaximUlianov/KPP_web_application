@@ -33,4 +33,11 @@ public class ComplexNumberController {
         return ResponseEntity.ok(service.buildNum(real, imaginary));
     }
 
+    @RequestMapping(value = "/getByParts", method = RequestMethod.GET)
+    public ResponseEntity<ComplexNumber> getByParts( @RequestParam(name = "real",defaultValue = "0",required = false) String real,
+                                                        @RequestParam(name = "imaginary", defaultValue = "0",required = false) String imaginary){
+        ComplexNumber num = service.getByParts(Double.parseDouble(real), Double.parseDouble(imaginary));
+        return ResponseEntity.ok(num);
+    }
+
 }
