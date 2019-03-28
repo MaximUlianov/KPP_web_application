@@ -19,6 +19,7 @@ public class ComplexNumberController {
     public ComplexNumberController(ComplexNumberService service){
         this.service = service;
     }
+
     @RequestMapping(value="", method = RequestMethod.GET)
     public ResponseEntity<ComplexNumber> complexNumber( @RequestParam(name = "real",defaultValue = "0",required = false) String real,
                                                         @RequestParam(name = "imaginary", defaultValue = "0",required = false) String imaginary) {
@@ -38,6 +39,12 @@ public class ComplexNumberController {
                                                         @RequestParam(name = "imaginary", defaultValue = "0",required = false) String imaginary){
         ComplexNumber num = service.getByParts(Double.parseDouble(real), Double.parseDouble(imaginary));
         return ResponseEntity.ok(num);
+    }
+
+    @RequestMapping(value = "/counter", method = RequestMethod.GET)
+    public ResponseEntity<Integer> getCounter(){
+        Integer counter = service.incrementCounter();
+        return ResponseEntity.ok(counter);
     }
 
 }

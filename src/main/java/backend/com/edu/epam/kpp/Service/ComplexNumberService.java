@@ -4,6 +4,8 @@ import backend.com.edu.epam.kpp.Controller.ComplexNumberController;
 import backend.com.edu.epam.kpp.Entity.ComplexNumber;
 import backend.com.edu.epam.kpp.Repository.ComplexNumberRepository;
 import backend.com.edu.epam.kpp.Repository.Impl.ComplexNumberRepositoryImpl;
+import backend.com.edu.epam.kpp.cache.Cache;
+import backend.com.edu.epam.kpp.cache.InputParam;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.CacheManager;
@@ -20,6 +22,7 @@ import org.springframework.stereotype.Service;
 public class ComplexNumberService {
 
     private static final Logger logger = Logger.getLogger(ComplexNumberController.class);
+    private int i = 0;
 
     @Autowired
     private ComplexNumberRepository repository;
@@ -39,6 +42,19 @@ public class ComplexNumberService {
     @Bean
     public CacheManager cacheManager() {
         return new ConcurrentMapCacheManager("complexNumbers");
+    }
+
+
+    @Autowired
+    private Cache cache;
+
+
+    public ComplexNumber checkCache(double real, double img) {
+        return cache.getMap().get(new InputParam(real, img));
+    }
+
+    public void addIntoCache(double real, double img, ComplexNumber num) {
+        cache.add(new InputParam(real, img), num);
     }
 
 
@@ -67,9 +83,19 @@ public class ComplexNumberService {
         if (logger.isDebugEnabled()) {
             logger.debug("buildNum method is called!");
         }
+        ComplexNumber cacheResult = this.checkCache(Double.parseDouble(real),Double.parseDouble(img));
 
-        ComplexNumber num = new ComplexNumber(Double.parseDouble(real),Double.parseDouble(img));
+        if (cacheResult == null) {
+            ComplexNumber cNum = new ComplexNumber(Double.parseDouble(real),Double.parseDouble(img));
+            this.addIntoCache(Double.parseDouble(real), Double.parseDouble(img), cNum);
+            return cNum;
+        }
+
         logger.debug("buildNum completed ");
-        return num;
+        return cacheResult;
+    }
+
+    public int incrementCounter(){
+        return ++i;
     }
 }
