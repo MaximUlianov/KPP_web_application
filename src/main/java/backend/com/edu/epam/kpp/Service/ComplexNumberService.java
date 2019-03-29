@@ -95,7 +95,8 @@ public class ComplexNumberService {
         return cacheResult;
     }
 
-    public int incrementCounter(){
+    public synchronized int incrementCounter(){
+        logger.debug("Counter: " + i);
         return ++i;
     }
 }
