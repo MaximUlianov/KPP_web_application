@@ -2,11 +2,12 @@ package backend.com.edu.epam.kpp.Controller;
 
 import backend.com.edu.epam.kpp.Entity.ComplexNumber;
 
+import backend.com.edu.epam.kpp.Entity.InputList;
+import backend.com.edu.epam.kpp.Entity.ResponseArray;
 import backend.com.edu.epam.kpp.Service.ComplexNumberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 
 
 @RestController
@@ -45,6 +46,12 @@ public class ComplexNumberController {
     public ResponseEntity<Integer> getCounter(){
         Integer counter = service.incrementCounter();
         return ResponseEntity.ok(counter);
+    }
+
+    @PostMapping
+    @ResponseBody
+    public ResponseEntity<ResponseArray> sequence(@RequestBody InputList arr){
+        return ResponseEntity.ok(service.validateParams(arr));
     }
 
 }

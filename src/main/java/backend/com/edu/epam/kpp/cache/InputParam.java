@@ -7,6 +7,9 @@ public class InputParam {
     private double real;
     private double imaginary;
 
+    public InputParam() {
+    }
+
     public InputParam(double real, double imaginary) {
         this.real = real;
         this.imaginary = imaginary;

@@ -2,7 +2,7 @@ package backend.com.edu.epam.kpp.Entity;
 
 import java.util.Objects;
 
-public class ComplexNumber {
+public class ComplexNumber implements Comparable<ComplexNumber>{
     private String errMsg;
     private String complexNumber;
     private double real;
@@ -96,5 +96,10 @@ public class ComplexNumber {
     @Override
     public int hashCode() {
         return Objects.hash(real, imaginary);
+    }
+
+    @Override
+    public int compareTo(ComplexNumber o) {
+        return Double.compare(this.getModule(), o.getModule());
     }
 }

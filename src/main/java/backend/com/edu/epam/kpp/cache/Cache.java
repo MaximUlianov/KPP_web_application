@@ -11,22 +11,22 @@ public class Cache {
     private static final Logger logger = Logger.getLogger(Cache.class);
 
 
-    HashMap<InputParam, ComplexNumber> map = new HashMap<>();
+    HashMap<InputParam, Integer> map = new HashMap<>();
 
     public Cache() {
     }
 
 
-    public void add(InputParam parameters, ComplexNumber entity){
-        map.put(parameters, entity);
+    public void add(InputParam parameters, Integer num){
+        map.put(parameters, num);
         logger.info("Component added into cache");
     }
 
-    public HashMap<InputParam, ComplexNumber> getMap() {
+    public HashMap<InputParam, Integer> getMap() {
         return map;
     }
 
-    public void setMap(HashMap<InputParam, ComplexNumber> map) {
+    public void setMap(HashMap<InputParam, Integer> map) {
         this.map = map;
     }
 }
