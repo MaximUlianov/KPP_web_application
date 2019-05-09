@@ -7,7 +7,8 @@ import backend.com.edu.epam.kpp.Entity.Response;
 import java.util.List;
 
 public interface RequestService {
-    List<Long> addData(InputList list);
+    List<Long> addData(InputList list, long procId);
+    List<Request> getDataById(long id);
     List<Request> getAllRequests();
     Response getResponse(long id);
 }

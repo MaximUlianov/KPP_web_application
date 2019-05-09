@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.concurrent.*;
 
 
@@ -26,16 +27,11 @@ public class RequestResponseController {
 
     @PostMapping
     @ResponseBody
-    public ResponseEntity<List<Request>> sequence(@RequestBody InputList list){
-        requestService.addData(list);
-        return ResponseEntity.ok(requestService.getAllRequests());
-    }
-
-    @PostMapping(value = "/future")
-    @ResponseBody
-    public ResponseEntity<List<Response>> futureSequence(@RequestBody InputList list){
+    public ResponseEntity<String> futureSequence(@RequestBody InputList list){
+        Random random = new Random();
+        long procId = random.nextInt(5000);
         Callable task = () -> {
-            return requestService.addData(list);
+            return requestService.addData(list, procId);
         };
         FutureTask<List<Long>> future = new FutureTask<>(task);
         new Thread(future).start();
@@ -47,21 +43,12 @@ public class RequestResponseController {
                 e.printStackTrace();
             }
         }
+        return ResponseEntity.ok("Your request is available on id: " + procId);
+    }
 
-        List<Long> answers = new ArrayList<>();
-        try {
-            answers = future.get();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (ExecutionException e) {
-            e.printStackTrace();
-        }
-
-        List<Response> responses = new ArrayList<>();
-        answers.forEach(value->{
-            responses.add(requestService.getResponse(value));
-        });
-        return ResponseEntity.ok(responses);
-
+    @GetMapping
+    @ResponseBody
+    public ResponseEntity<List<Request>> getDataById(@RequestParam(value = "id") long id){
+        return ResponseEntity.ok(requestService.getDataById(id));
     }
 }

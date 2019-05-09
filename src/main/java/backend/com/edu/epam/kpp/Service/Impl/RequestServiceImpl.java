@@ -29,7 +29,7 @@ public class RequestServiceImpl implements RequestService {
     }
 
     @Override
-    public List<Long> addData(InputList list) {
+    public List<Long> addData(InputList list,long procId) {
         ArrayList<Long> answers = new ArrayList<>();
         list.getParams().stream().forEach(value->{
 
@@ -42,6 +42,7 @@ public class RequestServiceImpl implements RequestService {
                 answers.add(response.getId());
                 Request request = new Request(value.getReal(), value.getImaginary());
                 request.setResponse(response);
+                request.setProcId(procId);
                 requestRepository.save(request);
                 cache.add(new InputParam(value.getReal(), value.getImaginary()), 0);
             }
@@ -50,8 +51,13 @@ public class RequestServiceImpl implements RequestService {
     }
 
     @Override
+    public List<Request> getDataById(long id) {
+        return requestRepository.findByProcId(id);
+    }
+
+    @Override
     public List<Request> getAllRequests() {
-        return (List<Request>) requestRepository.findAll();
+        return (List<Request>)requestRepository.findAll();
     }
 
     @Override

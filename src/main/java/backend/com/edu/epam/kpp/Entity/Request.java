@@ -11,6 +11,7 @@ public class Request {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private long id;
+    private long procId;
     private double imaginaryPart;
     private double realPart;
 
@@ -56,6 +57,14 @@ public class Request {
 
     public void setResponse(Response response) {
         this.response = response;
+    }
+
+    public long getProcId() {
+        return procId;
+    }
+
+    public void setProcId(long procId) {
+        this.procId = procId;
     }
 
     @Override

@@ -1122,32 +1122,38 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="283" parent="280" name="imaginary">
+    <column id="283" parent="280" name="proc_id">
       <Position>2</Position>
-      <DataType>double|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="284" parent="280" name="real">
-      <Position>3</Position>
-      <DataType>double|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="285" parent="280" name="response_id">
-      <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="286" parent="280" name="fk_request_response_idx">
+    <column id="284" parent="280" name="imaginary_part">
+      <Position>3</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="285" parent="280" name="real_part">
+      <Position>4</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="286" parent="280" name="response_id">
+      <Position>5</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="287" parent="280" name="fk_request_response_idx">
       <ColNames>response_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="287" parent="280" name="PRIMARY">
+    <key id="288" parent="280" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="288" parent="280" name="fk_request_response">
+    <foreign-key id="289" parent="280" name="fk_request_response">
       <ColNames>response_id</ColNames>
       <RefSchemaName>kpp</RefSchemaName>
       <RefTableName>response</RefTableName>
@@ -1155,29 +1161,29 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="289" parent="281" name="id">
+    <column id="290" parent="281" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="290" parent="281" name="complex_number">
+    <column id="291" parent="281" name="complex_number">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="291" parent="281" name="phase">
+    <column id="292" parent="281" name="phase">
       <Position>3</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="292" parent="281" name="module">
+    <column id="293" parent="281" name="module">
       <Position>4</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="293" parent="281" name="PRIMARY">
+    <key id="294" parent="281" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
