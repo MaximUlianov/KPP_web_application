@@ -11,4 +11,5 @@ public interface RequestService {
     List<Request> getDataById(long id);
     List<Request> getAllRequests();
     Response getResponse(long id);
+    String calculateId(InputList list);
 }

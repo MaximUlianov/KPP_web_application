@@ -188,3 +188,13 @@
 2019-05-23 03:53:32 INFO  Cache:22 - Component added into cache
 2019-05-23 03:53:32 DEBUG RequestServiceImpl:37 - add data to db
 2019-05-23 03:53:32 INFO  Cache:22 - Component added into cache
+2019-05-23 03:58:53 DEBUG RequestServiceImpl:40 - add data to db
+2019-05-23 03:58:53 INFO  Cache:22 - Component added into cache
+2019-05-23 03:58:53 DEBUG RequestServiceImpl:40 - add data to db
+2019-05-23 03:58:53 INFO  Cache:22 - Component added into cache
+2019-05-23 03:58:53 DEBUG RequestServiceImpl:40 - add data to db
+2019-05-23 03:58:53 INFO  Cache:22 - Component added into cache
+2019-05-23 03:59:14 DEBUG ComplexNumberController:56 - checkParameters method is called!
+2019-05-23 03:59:14 DEBUG ComplexNumberController:70 - checking finished successfully
+2019-05-23 03:59:14 DEBUG ComplexNumberController:77 - buildNum method is called!
+2019-05-23 03:59:14 DEBUG ComplexNumberController:79 - buildNum completed 

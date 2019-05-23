@@ -28,15 +28,7 @@ public class RequestResponseController {
     @PostMapping
     @ResponseBody
     public ResponseEntity futureSequence(@RequestBody InputList list){
-        Random random = new Random();
-        long procId = random.nextInt(5000);
-        Callable task = () -> {
-            return requestService.addData(list, procId);
-        };
-        FutureTask<List<Long>> future = new FutureTask<>(task);
-        new Thread(future).start();
-        logger.debug("return");
-        return ResponseEntity.ok("Your request is available on id: " + procId);
+        return ResponseEntity.ok(requestService.calculateId(list));
     }
 
     @GetMapping

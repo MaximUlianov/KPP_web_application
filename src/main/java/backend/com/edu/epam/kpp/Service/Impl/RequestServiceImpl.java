@@ -13,6 +13,9 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
+import java.util.concurrent.Callable;
+import java.util.concurrent.FutureTask;
 
 @Service
 public class RequestServiceImpl implements RequestService {
@@ -73,5 +76,15 @@ public class RequestServiceImpl implements RequestService {
         });
     }
 
-
+    @Override
+    public String calculateId(InputList list) {
+        Random random = new Random();
+        long procId = random.nextInt(5000);
+        Callable task = () -> {
+            return addData(list, procId);
+        };
+        FutureTask<List<Long>> future = new FutureTask<>(task);
+        new Thread(future).start();
+        return "Your request is available on id: " + procId;
+    }
 }
