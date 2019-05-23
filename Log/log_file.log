@@ -161,3 +161,30 @@
 2019-05-09 23:33:05 DEBUG RequestResponseController:39 - calculate result
 2019-05-09 23:33:05 DEBUG RequestResponseController:39 - calculate result
 2019-05-09 23:33:05 INFO  Cache:22 - Component added into cache
+2019-05-09 23:39:02 INFO  Cache:22 - Component added into cache
+2019-05-09 23:39:02 INFO  Cache:22 - Component added into cache
+2019-05-09 23:39:02 INFO  Cache:22 - Component added into cache
+2019-05-09 23:39:02 INFO  Cache:22 - Component added into cache
+2019-05-09 23:39:43 DEBUG ComplexNumberController:77 - buildNum method is called!
+2019-05-09 23:39:43 DEBUG ComplexNumberController:79 - buildNum completed 
+2019-05-09 23:39:43 DEBUG ComplexNumberController:77 - buildNum method is called!
+2019-05-09 23:39:43 DEBUG ComplexNumberController:79 - buildNum completed 
+2019-05-09 23:39:43 DEBUG ComplexNumberController:77 - buildNum method is called!
+2019-05-09 23:39:43 DEBUG ComplexNumberController:79 - buildNum completed 
+2019-05-09 23:39:43 DEBUG ComplexNumberController:77 - buildNum method is called!
+2019-05-09 23:39:43 DEBUG ComplexNumberController:79 - buildNum completed 
+2019-05-09 23:40:21 DEBUG ComplexNumberController:77 - buildNum method is called!
+2019-05-09 23:40:21 DEBUG ComplexNumberController:79 - buildNum completed 
+2019-05-09 23:40:21 DEBUG ComplexNumberController:77 - buildNum method is called!
+2019-05-09 23:40:21 DEBUG ComplexNumberController:79 - buildNum completed 
+2019-05-09 23:40:21 DEBUG ComplexNumberController:77 - buildNum method is called!
+2019-05-09 23:40:21 DEBUG ComplexNumberController:79 - buildNum completed 
+2019-05-09 23:40:21 DEBUG ComplexNumberController:77 - buildNum method is called!
+2019-05-09 23:40:21 DEBUG ComplexNumberController:79 - buildNum completed 
+2019-05-23 03:53:32 DEBUG RequestResponseController:38 - return
+2019-05-23 03:53:32 DEBUG RequestServiceImpl:37 - add data to db
+2019-05-23 03:53:32 INFO  Cache:22 - Component added into cache
+2019-05-23 03:53:32 DEBUG RequestServiceImpl:37 - add data to db
+2019-05-23 03:53:32 INFO  Cache:22 - Component added into cache
+2019-05-23 03:53:32 DEBUG RequestServiceImpl:37 - add data to db
+2019-05-23 03:53:32 INFO  Cache:22 - Component added into cache

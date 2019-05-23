@@ -1,11 +1,13 @@
 package backend.com.edu.epam.kpp.Service.Impl;
 
+import backend.com.edu.epam.kpp.Controller.ComplexNumberController;
 import backend.com.edu.epam.kpp.Entity.*;
 import backend.com.edu.epam.kpp.Repository.RequestRepository;
 import backend.com.edu.epam.kpp.Repository.ResponseRepository;
 import backend.com.edu.epam.kpp.Service.RequestService;
 import backend.com.edu.epam.kpp.cache.Cache;
 import backend.com.edu.epam.kpp.cache.InputParam;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +17,7 @@ import java.util.List;
 @Service
 public class RequestServiceImpl implements RequestService {
 
+    private static final Logger logger = Logger.getLogger(RequestServiceImpl.class);
     RequestRepository requestRepository;
     ResponseRepository responseRepository;
     Cache cache;
@@ -25,27 +28,24 @@ public class RequestServiceImpl implements RequestService {
         this.requestRepository = requestRepository;
         this.responseRepository = responseRepository;
         this.cache = cache;
-        addDBDataToCache();
     }
 
     @Override
     public List<Long> addData(InputList list,long procId) {
         ArrayList<Long> answers = new ArrayList<>();
         list.getParams().stream().forEach(value->{
+            logger.debug("add data to db");
+            ComplexNumber complexNumber = new ComplexNumber(value.getReal(), value.getImaginary());
+            Response response = new Response(complexNumber.getComplexNumber(),
+                    complexNumber.getModule(), complexNumber.getPhase());
+            responseRepository.save(response);
+            answers.add(response.getId());
+            Request request = new Request(value.getReal(), value.getImaginary());
+            request.setResponse(response);
+            request.setProcId(procId);
+            requestRepository.save(request);
+            cache.add(new InputParam(value.getReal(), value.getImaginary()), 0);
 
-            Integer inp = cache.getMap().get(new InputParam(value.getReal(), value.getImaginary()));
-            if(inp == null) {
-                ComplexNumber complexNumber = new ComplexNumber(value.getReal(), value.getImaginary());
-                Response response = new Response(complexNumber.getComplexNumber(),
-                        complexNumber.getModule(), complexNumber.getPhase());
-                responseRepository.save(response);
-                answers.add(response.getId());
-                Request request = new Request(value.getReal(), value.getImaginary());
-                request.setResponse(response);
-                request.setProcId(procId);
-                requestRepository.save(request);
-                cache.add(new InputParam(value.getReal(), value.getImaginary()), 0);
-            }
         });
         return answers;
     }

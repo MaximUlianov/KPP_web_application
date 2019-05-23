@@ -27,7 +27,7 @@ public class RequestResponseController {
 
     @PostMapping
     @ResponseBody
-    public ResponseEntity<String> futureSequence(@RequestBody InputList list){
+    public ResponseEntity futureSequence(@RequestBody InputList list){
         Random random = new Random();
         long procId = random.nextInt(5000);
         Callable task = () -> {
@@ -35,14 +35,7 @@ public class RequestResponseController {
         };
         FutureTask<List<Long>> future = new FutureTask<>(task);
         new Thread(future).start();
-        while(!future.isDone()){
-            logger.debug("calculate result");
-            try {
-                Thread.sleep(10);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
+        logger.debug("return");
         return ResponseEntity.ok("Your request is available on id: " + procId);
     }
 
